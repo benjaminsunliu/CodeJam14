@@ -24,7 +24,11 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>
+        <MantineProvider
+          theme={theme}
+          defaultColorScheme="dark"
+          forceColorScheme="dark"
+        >
           <Notifications />
           <ModalsProvider>{children}</ModalsProvider>
         </MantineProvider>

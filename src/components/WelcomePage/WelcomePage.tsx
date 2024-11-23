@@ -13,8 +13,15 @@ import {
 } from "@mantine/core";
 import image from "./image.svg";
 import classes from "./WelcomePage.module.css";
+import { useRouter } from "next/navigation";
 
 export function WelcomePage() {
+  const router = useRouter();
+
+  const onWelcomeClicked = () => {
+    router.push("/dashboard");
+  };
+
   return (
     <Container size="md">
       <div className={classes.inner}>
@@ -54,7 +61,12 @@ export function WelcomePage() {
           </List>
 
           <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}>
+            <Button
+              radius="xl"
+              size="md"
+              className={classes.control}
+              onClick={onWelcomeClicked}
+            >
               Get started
             </Button>
             <Button
