@@ -3062,6 +3062,7 @@ __metadata:
     eslint: "npm:8.57.0"
     eslint-config-next: "npm:14.2.4"
     next: "npm:^15.0.3"
+    pocketbase: "npm:^0.21.5"
     postcss: "npm:^8.4.38"
     postcss-preset-mantine: "npm:1.17.0"
     postcss-simple-vars: "npm:^7.0.1"
@@ -3485,6 +3486,13 @@ __metadata:
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 10c0/26c02b8d06f03206fc2ab8d16f19960f2ff9e81a658f831ecb656d8f17d9edc799e8364b1f4a7873e89d9702dff96204be0fa26fe4181f6843f040f819dac4be
+  languageName: node
+  linkType: hard
+
+"pocketbase@npm:^0.21.5":
+  version: 0.21.5
+  resolution: "pocketbase@npm:0.21.5"
+  checksum: 10c0/782500741a8b964cefdd1cee3f7ed37a84078033ab162ef3f397439d16444f267a1ea86c56a7e14642802f96f7264a59c90bfd3f0bd4d3678dad39fa7ac049c6
   languageName: node
   linkType: hard
 
