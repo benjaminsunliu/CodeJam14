@@ -39,7 +39,7 @@ export default function LoginPage() {
       }
       const data = await response.json();
       if (data?.token) {
-        router.push("/dashboard");
+        router.push("/features/dashboard");
         router.refresh();
       } else {
         throw "Failed to authenticate user";

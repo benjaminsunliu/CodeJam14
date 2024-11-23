@@ -19,7 +19,7 @@ export function WelcomePage() {
   const router = useRouter();
 
   const onWelcomeClicked = () => {
-    router.push("/dashboard");
+    router.push("/features/dashboard");
   };
 
   return (

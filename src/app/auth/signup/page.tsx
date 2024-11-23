@@ -46,7 +46,7 @@ export default function LoginPage() {
 
       await response.json();
 
-      router.push("/login");
+      router.push("/auth/login");
     } catch (err) {
       console.error("Failed to register user");
     }

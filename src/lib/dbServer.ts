@@ -1,7 +1,7 @@
 import PocketBase from "pocketbase";
 import { APP_DATABASE } from "@/lib/dbNames";
 import { ISignUpPayload, UserAuthModel } from "@/types/UserAuth";
-import { RequestCookies } from "next/dist/compiled/@edge-runtime/cookies";
+import { ReadonlyRequestCookies } from "next/dist/server/web/spec-extension/adapters/request-cookies";
 
 export const POCKET_BASE_URL = "https://codejam14-smart-kids.pockethost.io";
 
@@ -72,7 +72,7 @@ export class DatabaseServer {
     }
   }
 
-  async isAuthenticated(cookieStore: RequestCookies) {
+  async isAuthenticated(cookieStore: ReadonlyRequestCookies) {
     const cookie = cookieStore.get("pb_auth");
     if (!cookie) {
       return false;
@@ -82,7 +82,7 @@ export class DatabaseServer {
     return this.client.authStore.isValid || false;
   }
 
-  async getUser(cookieStore: RequestCookies) {
+  async getUser(cookieStore: ReadonlyRequestCookies) {
     const cookie = cookieStore.get("pb_auth");
     if (!cookie) {
       return undefined;
